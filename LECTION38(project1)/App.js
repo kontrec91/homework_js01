@@ -5,6 +5,7 @@ import './App.css';
 const Header = (props) =>
 <header>
     {console.log(props)}
+  {console.log(props)}
     <img src={logo} className="App-logo" alt="logo" />
     <p>
     {props.children}
