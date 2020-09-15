@@ -1,0 +1,185 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App div {
+  display: flex;
+}
+
+.App input {
+  margin: 0 10px;
+}
+
+.timer-control {
+  height: 22px;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+#pause {
+  margin-left: 10px;
+  width: 28px;
+  height: 25px;
+  z-index: 2;
+}
+
+.App .login {
+  display: block;
+}
+
+.App div {
+  margin: 20px;
+}
+
+.timer-control div {
+  height: 22px;
+  margin-top: 0;
+}
+
+.login input,
+.login button {
+  margin: 0 10px 10px 5px;
+}
+
+.Aside {
+  width: 30%;
+}
+
+.Main {
+  width: 70%;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ LCD ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@import url(https://fonts.googleapis.com/css?family=VT323:400,600);
+
+.digital-clock {
+  background: #144;
+  padding-left: 5px;
+}
+
+.digital-clock .clock-time {
+  width: 100%;
+  font-size: 6rem;
+  color: greenyellow;
+  font-weight: 600;
+  font-family: VT323, monospace;
+  line-height: 1.2;
+  text-align: center;
+  text-shadow: 0 0 10px #afa;
+}
+
+.lcd-frame {
+  box-shadow: inset 0 0 10px 1px #000;
+}
+
+.lcd-frame div {
+  margin: 0 auto;
+}
+
+.lcd-frame div button {
+  top: 40%;
+  position: absolute;
+  right: 10%;
+}
+
+.lcd {
+  position: relative;
+}
+
+.lcd:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image:
+    -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.2) 33.3%, rgba(255, 255, 255, 0.4) 33.3%, rgba(255, 255, 255, 0.4) 66.7%, rgba(255, 255, 255, 0.6) 66.7%),
+    -webkit-linear-gradient(left, rgba(255, 0, 0, 0.7) 33.3%, rgba(0, 255, 0, 0.7) 33.3%, rgba(0, 255, 0, 0.6) 66.7%, rgba(0, 0, 255, 0.6) 66.7%);
+  background-image:
+    -moz-linear-gradient(bottom, rgba(255, 255, 255, 0.2) 33.3%, rgba(255, 255, 255, 0.4) 33.3%, rgba(255, 255, 255, 0.4) 66.7%, rgba(255, 255, 255, 0.6) 66.7%),
+    -moz-linear-gradient(left, rgba(255, 0, 0, 0.7) 33.3%, rgba(0, 255, 0, 0.7) 33.3%, rgba(0, 255, 0, 0.6) 66.7%, rgba(0, 0, 255, 0.6) 66.7%);
+  background-image:
+    linear-gradient(to top, rgba(255, 255, 255, 0.2) 33.3%, rgba(255, 255, 255, 0.4) 33.3%, rgba(255, 255, 255, 0.4) 66.7%, rgba(255, 255, 255, 0.6) 66.7%),
+    linear-gradient(to right, rgba(255, 0, 0, 0.7) 33.3%, rgba(0, 255, 0, 0.7) 33.3%, rgba(0, 255, 0, 0.6) 66.7%, rgba(0, 0, 255, 0.6) 66.7%);
+  background-size: 4px 4px;
+  mix-blend-mode: multiply;
+}
+
+.digital-clock .clock-separator-blink {
+  position: relative;
+  -moz-animation: clock-separator-blink 1s ease infinite;
+  -webkit-animation: clock-separator-blink 1s ease infinite;
+  animation: clock-separator-blink 1s ease infinite;
+  animation-delay: 2ms;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+@-webkit-keyframes clock-separator-blink {
+  0% {
+    opacity: 1.0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes clock-separator-blink {
+  0% {
+    opacity: 1.0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes clock-separator-blink {
+  0% {
+    opacity: 1.0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
